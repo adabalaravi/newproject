@@ -75,3 +75,11 @@ jobs:
         run: ls
       - name: Deploy
         run: echo "Deploying..."
+  report:
+    needs: [lint, deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output information
+        run: |
+          echo "This is a report job that runs after the deploy job."
+          echo "${{ github }}"
