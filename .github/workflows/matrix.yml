@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  continue-on-failure: true 
+    continue-on-failure: true 
     strategy:
       matrix:
         node-version: [14, 16, 18]
